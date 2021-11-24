@@ -5,7 +5,7 @@
       "label": "Start server",
       "type": "npm",
       "script": "dev",
-      "detail": "cross-env ts-node-dev -r tsconfig-paths/register src/main.ts",
+      "detail": "NODE_OPTIONS='--inspect-brk' ts-node -r tsconfig-paths/register src/main.ts",
       "isBackground": true,
 
       // This task is run before debugging.

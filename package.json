@@ -4,7 +4,7 @@
   "description": "My personal Gemini server",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
-    "dev": "ts-node-dev -r tsconfig-paths/register src/main.ts",
+    "dev": "NODE_OPTIONS='--inspect-brk' ts-node -r tsconfig-paths/register src/main.ts",
     "lint": "eslint --ext .js,.ts src types",
     "lint:fix": "npm run lint -- --fix",
     "typecheck": "tsc --noEmit",
@@ -28,7 +28,6 @@
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "ts-node-dev": "^1.1.8",
     "tsconfig-paths": "^3.12.0"
   }
 }
