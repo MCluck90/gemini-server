@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start server",
+      "type": "npm",
+      "script": "dev",
+      "detail": "cross-env ts-node-dev -r tsconfig-paths/register src/main.ts",
+      "isBackground": true,
+
+      // This task is run before debugging.
+      // However, since it's a watch script, we need to tell VS Code not to wait on it
+      "problemMatcher": [
+        {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".",
+            "endsPattern": "."
+          }
+        }
+      ]
+    },
+    {
+      "label": "Stop server",
+      "type": "shell",
+      "command": "echo ${input:terminate}",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "terminate",
+      "type": "command",
+      "command": "workbench.action.tasks.terminate",
+      "args": "Start server"
+    }
+  ]
+}

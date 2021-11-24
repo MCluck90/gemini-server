@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Server",
+      "port": 9229,
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "restart": {
+        "delay": 500,
+        "maxAttempts": 5
+      },
+      "resolveSourceMapLocations": ["**", "!**/node_modules/**"],
+      "preLaunchTask": "Start server",
+      "postDebugTask": "Stop server",
+      "smartStep": true
+    }
+  ]
+}
