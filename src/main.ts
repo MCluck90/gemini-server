@@ -1,6 +1,7 @@
 import * as tls from 'tls'
 import * as fs from 'fs'
 import * as path from 'path'
+import { notFound, success } from './response'
 
 const sslConfigPath = path.join(__dirname, '../.ssl')
 const contentFolder = path.join(__dirname, 'content')
@@ -42,12 +43,11 @@ tls
         }
         const filePath = findFile(startOfPath)
         if (filePath === null) {
-          socket.write('51 \r\n')
+          notFound(socket, `Unknown file: ${startOfPath}`)
         } else {
-          const content = fs.readFileSync(filePath)
-          socket.write(`20 \r\n${content}`)
+          const content = fs.readFileSync(filePath).toString()
+          success(socket, content)
         }
-        socket.end()
       })
     },
   )

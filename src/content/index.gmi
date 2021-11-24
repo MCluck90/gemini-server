@@ -1,3 +1,15 @@
-# Hello world
+# [Cluckware]
 
-=> about About Me
+## Blog Posts
+
+=> https://mcluck.tech/blog/reduce-redux-boilerplate-with-lenses/ Reduce Redux Boilerplate with Lenses
+=> https://mcluck.tech/blog/how-i-made-windows-sexier/ How I Made Windows Sexier with Opacity
+=> https://mcluck.tech/blog/writing-something-on-the-side/ Writing something on the side
+=> https://mcluck.tech/blog/abusing-proxies-for-dsls/ Abusing Proxies for DSLs
+
+## Tools and Toys
+
+=> https://mcluck.tech/what-should-i-eat What Should I Eat?
+=> https://mcluck.tech/vision-demo Field of View Demo
+=> https://mcluck.tech/randomize-by-date Randomize Items by Date
+=> https://mcluck.tech/dungeon-beat-down Game Jam: Dungeon Beat Down
